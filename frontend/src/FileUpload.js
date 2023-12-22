@@ -12,10 +12,11 @@ const FileUpload = () => {
   const handleFileUpload = async () => {
     const formData = new FormData();
     formData.append("excelFile", file);
+    console.log("formData:", formData);
 
     try {
       //use axios to make post req to backend
-      await axios.post("http//localhost:5000/upload", formData, {
+      await axios.post("http://localhost:5000/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
